@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json.schemastore.org/swcrc",
+  "jsc": {
+    "parser": {
+      "syntax": "typescript",
+      "tsx": false,
+      "decorators": true,
+      "dynamicImport": true
+    },
+    "target": "es2022",
+    "paths": {
+      "@/*": ["./client/src/*"],
+      "@shared/*": ["./shared/*"]
+    },
+    "baseUrl": ".",
+    "loose": false
+  },
+  "module": {
+    "type": "es6",
+    "strict": true,
+    "noInterop": false
+  },
+  "sourceMaps": true,
+  "exclude": [
+    "node_modules",
+    "dist",
+    ".git"
+  ]
+}

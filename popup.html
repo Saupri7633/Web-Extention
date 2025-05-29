@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Security Guardian</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <div class="popup-header">
+      <div class="icon-container">
+        <span class="material-icons text-safe">security</span>
+      </div>
+      <div class="header-text">
+        <h1>Web Security Guardian</h1>
+        <p id="protection-status">Protection is active</p>
+      </div>
+    </div>
+    
+    <div class="popup-content">
+      <div class="setting-row">
+        <div class="setting-info">
+          <p class="setting-title">Enable protection</p>
+          <p class="setting-description">Detect and block malicious sites</p>
+        </div>
+        <div class="toggle-container">
+          <input type="checkbox" id="protection-toggle" class="toggle-checkbox" checked>
+          <label for="protection-toggle" class="toggle-label"></label>
+        </div>
+      </div>
+      
+      <div class="setting-row">
+        <div class="setting-info">
+          <p class="setting-title">Remember choices</p>
+          <p class="setting-description">Save sites you trust</p>
+        </div>
+        <div class="toggle-container">
+          <input type="checkbox" id="remember-toggle" class="toggle-checkbox" checked>
+          <label for="remember-toggle" class="toggle-label"></label>
+        </div>
+      </div>
+      
+      <button id="trusted-sites-btn" class="advanced-btn">Manage Trusted Sites</button>
+      
+      <div id="trusted-sites-panel" class="trusted-sites-panel hidden">
+        <h2>Trusted Sites</h2>
+        <div id="trusted-sites-list" class="trusted-sites-list">
+          <!-- Trusted sites will be populated here -->
+          <div class="empty-state">
+            <p>No trusted sites yet</p>
+            <p class="setting-description">Sites you choose to proceed to will appear here</p>
+          </div>
+        </div>
+        <button id="clear-sites-btn" class="clear-btn hidden">Clear All Trusted Sites</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
